@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "ziKODaTAf7zRpG1c5B/dv+ufnYD/qzgDeYsoQNyPZYs9utAkn/ng+bn6XJMpNg69rVlgu4vR9K51JbhHd6WM1w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hashe\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\moq\\4.20.70\\moq.4.20.70.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\xunit\\2.6.6\\xunit.2.6.6.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\xunit.analyzers\\1.10.0\\xunit.analyzers.1.10.0.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\xunit.assert\\2.6.6\\xunit.assert.2.6.6.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\xunit.core\\2.6.6\\xunit.core.2.6.6.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\xunit.extensibility.core\\2.6.6\\xunit.extensibility.core.2.6.6.nupkg.sha512",
+    "C:\\Users\\hashe\\.nuget\\packages\\xunit.extensibility.execution\\2.6.6\\xunit.extensibility.execution.2.6.6.nupkg.sha512"
+  ],
+  "logs": []
+}
