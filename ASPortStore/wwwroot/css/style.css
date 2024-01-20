@@ -1,0 +1,154 @@
+﻿:root {
+    --background-colour: #e3e6e6;
+    --background-dark-colour: #c8c8c8;
+    --fore-colour: #1e1e1e;
+    --fore-darker-colour: #0d0d0d;
+    --main-colour: #35dd66;
+
+    --box-shadow-thickness: 2px;
+    --box-shadow-blurriness: 4px;
+    --box-shadow-colour: #0d0d0d70;
+    --box-shadow:
+        0 0 var(--box-shadow-blurriness) var(--box-shadow-thickness) var(--box-shadow-colour);
+
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+
+    margin: 0;
+    padding: 0;
+
+    color: var(--fore-colour);
+    background-color: var(--background-colour);
+}
+
+h1, h2, h3, h4, h5, h6,
+p, q, a, button, input {
+    text-decoration: none;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+    
+    color: inherit;
+}
+
+#main-header {
+    grid-column: 1 / -1;
+
+    padding: 2rem;
+
+    color: var(--background-colour);
+    background-color: var(--fore-colour);
+}
+
+#main-aside {
+    width: max(10rem, min(20rem, 20vw));
+
+    padding: 2rem;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    padding: 4rem;
+}
+
+#product-displayer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#product-displayer .product-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+#product-displayer .product-card span {
+    font-weight: bold;
+
+    padding: 0.5rem;
+
+    border-radius: 100rem;
+    color: var(--background-colour);
+    background: var(--main-colour);
+}
+
+#product-displayer .product-card p {
+    grid-column: 1 / -1;
+}
+
+.paginator {
+    --padding: var(--box-shadow-thickness);
+    --border-radius: calc(var(--box-shadow-thickness) * 5);
+
+    width: min-content;
+
+    display: flex;
+    gap: var(--padding);
+
+    padding: var(--padding);
+
+    border-radius: var(--border-radius);
+    background-color: var(--fore-colour);
+}
+
+.paginator a {
+    font-weight: bold;
+
+    width: 4rem;
+    height: 4rem;
+
+    display: flex;
+    place-content: center;
+    place-items: center;
+
+    background-color: var(--background-colour);
+
+    transition: background-color 250ms, color 250ms;
+}
+
+.paginator a:is(:first-child, :last-child) {
+    border-radius: var(--border-radius);
+}
+
+.paginator a:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.paginator a:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.paginator a[data-is-selected-page] {
+    color: var(--background-colour);
+    background-color: var(--main-colour);
+}
+
+.paginator a:is(:hover, :focus-visible) {
+    color: var(--background-colour);
+    background-color: var(--fore-colour);
+}

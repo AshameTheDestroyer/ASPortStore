@@ -1,19 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Encodings.Web;
 using ASPortStore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace ASPortStore.Infrastructure;
 
-[HtmlTargetElement("div", Attributes = "page-model")]
-public class PageLinkTagHelper(IUrlHelperFactory urlHelperFactory) : TagHelper
+[HtmlTargetElement("section", Attributes = "page-model")]
+public class PaginatorTagHelper(IUrlHelperFactory urlHelperFactory) : TagHelper
 {
     private readonly IUrlHelperFactory urlHelperFactory = urlHelperFactory;
 
-    public string? ClassName { get; set; } = string.Empty;
-    public string? Id { get; set; } = string.Empty;
 
     [ViewContext, HtmlAttributeNotBound]
     public ViewContext? ViewContext { get; set; }
@@ -26,19 +26,20 @@ public class PageLinkTagHelper(IUrlHelperFactory urlHelperFactory) : TagHelper
         
         IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
         TagBuilder result = new("div");
-        result.AddCssClass("paginator");
-        
-        if (ClassName != null) { result.AddCssClass(ClassName); }
-        if (Id != null) { result.GenerateId(Id, "_"); }
 
-        for (int i = 1; i <= PageModel.TotalPages; i++)
+        for (int i = 0; i < PageModel.TotalPages; i++)
         {
             TagBuilder tag = new("a");
-            tag.Attributes["href"] = urlHelper.Action(PageAction, new { page = i });
-            tag.InnerHtml.Append(i.ToString());
+
+            tag.Attributes["href"] = urlHelper.Action(PageAction, new { page = i + 1 });
+            tag.InnerHtml.Append((i + 1).ToString());
+
+            if (i + 1 == PageModel.CurrentPage) { tag.Attributes["data-is-selected-page"] = null; }
+
             result.InnerHtml.AppendHtml(tag);
         }
 
+        output.AddClass("paginator", HtmlEncoder.Default);
         output.Content.AppendHtml(result.InnerHtml);
     }
 }

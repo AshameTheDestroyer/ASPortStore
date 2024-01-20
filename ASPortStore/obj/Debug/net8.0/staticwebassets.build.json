@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "PFtRWHDDeyvhUCoU6/l9bM3A0nUkhe79e7HKok4/FGg=",
+  "Hash": "9O8LLVNMQL67jbJXBJ2QAvHuktN6R3bnKnuhM41L0s4=",
   "Source": "ASPortStore",
   "BasePath": "_content/ASPortStore",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPortStore\\wwwroot",
+      "Source": "ASPortStore",
+      "ContentRoot": "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\",
+      "BasePath": "_content/ASPortStore",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\css\\style.css",
+      "SourceId": "ASPortStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\",
+      "BasePath": "_content/ASPortStore",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
 }
