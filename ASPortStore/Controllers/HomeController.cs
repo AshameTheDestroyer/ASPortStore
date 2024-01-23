@@ -18,17 +18,22 @@ public class HomeController(IStoreRepository storeRepository) : Controller
     //                           .Skip((page - 1) * PageSize)
     //                           .Take(PageSize));
 
-    public ViewResult Index(int page = 1)
+    public ViewResult Index(string? category, int page = 1)
         => View(new ProductsListViewModel
         {
-            Products = storeRepository.Products.OrderBy(p => p.ProductID)
-                                               .Skip((page - 1) * PageSize)
-                                               .Take(PageSize),
+            Products = storeRepository.Products
+                                      .OrderBy(product => product.ProductID)
+                                      .Where(product => category == null || product.Category == category)
+                                      .Skip((page - 1) * PageSize)
+                                      .Take(PageSize),
             PagingInfo = new PagingInfo
             {
                 CurrentPage = page,
                 ItemsPerPage = PageSize,
-                TotalItems = storeRepository.Products.Count(),
+                TotalItems = storeRepository.Products
+                                            .Where(product => category == null || product.Category == category)
+                                            .Count(),
             },
+            CurrentCategory = category,
         });
 }

@@ -54,9 +54,44 @@ p, q, a, button, input {
 }
 
 #main-aside {
-    width: max(10rem, min(20rem, 20vw));
+    --padding-block: 2rem;
 
-    padding: 2rem;
+    padding: var(--padding-block) 0;
+
+    box-shadow: var(--box-shadow);
+}
+
+#main-aside #navigation-menu {
+    position: sticky;
+    top: var(--padding-block);
+}
+
+#main-aside #navigation-menu ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0;
+    padding: 0;
+}
+
+#main-aside #navigation-menu ul li a {
+    font-size: 2rem;
+
+    padding: 2rem 4rem;
+
+    transition: background-color 250ms, color 250ms;
+}
+
+#main-aside #navigation-menu ul li a[data-is-selected-page=true] {
+    color: var(--background-colour);
+    background-color: var(--main-colour);
+}
+
+#main-aside #navigation-menu ul li a:is(:hover, :focus-visible) {
+    color: var(--background-colour);
+    background-color: var(--fore-colour);
 }
 
 #root {
@@ -87,6 +122,8 @@ p, q, a, button, input {
 
 #product-displayer .product-card span {
     font-weight: bold;
+
+    place-self: start;
 
     padding: 0.5rem;
 
@@ -129,7 +166,8 @@ p, q, a, button, input {
     transition: background-color 250ms, color 250ms;
 }
 
-.paginator a:is(:first-child, :last-child) {
+.paginator a:is(:first-child, :last-child),
+.paginator a:first-child:last-child {
     border-radius: var(--border-radius);
 }
 
@@ -143,7 +181,7 @@ p, q, a, button, input {
     border-bottom-left-radius: 0;
 }
 
-.paginator a[data-is-selected-page] {
+.paginator a[data-is-selected-page=true] {
     color: var(--background-colour);
     background-color: var(--main-colour);
 }

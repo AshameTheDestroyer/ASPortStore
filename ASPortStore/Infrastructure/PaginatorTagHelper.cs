@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using System.Text.Json.Serialization;
 
 namespace ASPortStore.Infrastructure;
 
@@ -20,6 +21,9 @@ public class PaginatorTagHelper(IUrlHelperFactory urlHelperFactory) : TagHelper
     public PagingInfo? PageModel { get; set; }
     public string? PageAction { get; set; }
 
+    [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
+    public Dictionary<string, object> PageUrlValues { get; set; } = [];
+
     public override void Process(TagHelperContext context, TagHelperOutput output)
     {
         if (ViewContext is null || PageModel is null) { return; }
@@ -31,10 +35,12 @@ public class PaginatorTagHelper(IUrlHelperFactory urlHelperFactory) : TagHelper
         {
             TagBuilder tag = new("a");
 
-            tag.Attributes["href"] = urlHelper.Action(PageAction, new { page = i + 1 });
+            PageUrlValues["page"] = i + 1;
+            tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
+            
             tag.InnerHtml.Append((i + 1).ToString());
 
-            if (i + 1 == PageModel.CurrentPage) { tag.Attributes["data-is-selected-page"] = null; }
+            if (i + 1 == PageModel.CurrentPage) { tag.Attributes["data-is-selected-page"] = "true"; }
 
             result.InnerHtml.AppendHtml(tag);
         }

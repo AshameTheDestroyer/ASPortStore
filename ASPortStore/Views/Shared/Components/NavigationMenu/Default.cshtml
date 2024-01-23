@@ -1,0 +1,31 @@
+﻿@model IEnumerable<string>
+
+<nav id="navigation-menu">
+    <ul>
+        <li>
+            <a
+                asp-action="Index"
+                asp-controller="Home" 
+                asp-route-category=""
+                asp-route-page=""
+                data-is-selected-page="@(ViewBag.SelectedCategory == null ? "true" : "")"
+            >
+                Home
+            </a>
+        </li>
+
+        @foreach (string category in Model ?? [])
+        {
+            <li>
+                <a
+                    asp-action="Index"
+                    asp-controller="Home" 
+                    asp-route-category="@category" 
+                    data-is-selected-page="@(ViewBag.SelectedCategory == @category ? "true" : "")"
+                >
+                    @category
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

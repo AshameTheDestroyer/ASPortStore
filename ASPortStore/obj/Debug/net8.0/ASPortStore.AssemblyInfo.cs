@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ASPortStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3b87cd52010adcab82a2df1a0af2e829bdce365")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fcfdd23ffd789aa1e655e08cbc9cd8490c45e62")]
 [assembly: System.Reflection.AssemblyProductAttribute("ASPortStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ASPortStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
