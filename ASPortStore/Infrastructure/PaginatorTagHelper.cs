@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using System.Text.Json.Serialization;
 
 namespace ASPortStore.Infrastructure;
 
@@ -14,7 +13,6 @@ namespace ASPortStore.Infrastructure;
 public class PaginatorTagHelper(IUrlHelperFactory urlHelperFactory) : TagHelper
 {
     private readonly IUrlHelperFactory urlHelperFactory = urlHelperFactory;
-
 
     [ViewContext, HtmlAttributeNotBound]
     public ViewContext? ViewContext { get; set; }

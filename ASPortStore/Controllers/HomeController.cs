@@ -8,15 +8,7 @@ public class HomeController(IStoreRepository storeRepository) : Controller
 {
     private readonly IStoreRepository storeRepository = storeRepository;
 
-    public int PageSize { get; set; } = 3;
-
-    //public IActionResult Index() => View(storeRepository.Products);
-
-    //public ViewResult Index(int page = 1)
-    //    => View(storeRepository.Products
-    //                           .OrderBy(product => product.ProductID)
-    //                           .Skip((page - 1) * PageSize)
-    //                           .Take(PageSize));
+    public int PageSize { get; set; } = 2;
 
     public ViewResult Index(string? category, int page = 1)
         => View(new ProductsListViewModel

@@ -142,3 +142,14 @@ C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\ob
 C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\obj\Debug\net8.0\ASPortStore.pdb
 C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\obj\Debug\net8.0\ASPortStore.genruntimeconfig.cache
 C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\obj\Debug\net8.0\ref\ASPortStore.dll
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\appsettings.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\ASPortStore.deps.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\ASPortStore.runtimeconfig.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\ASPortStore.staticwebassets.runtime.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\ASPortStore.Tests.deps.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\ASPortStore.Tests.runtimeconfig.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\ASPortStore.Tests\obj\ASPortStore.Tests.csproj.nuget.dgspec.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\ASPortStore.Tests\obj\project.assets.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\bin\Debug\net8.0\global.json
+C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\bin\Debug\net8.0\ASPortStore.Tests\obj\Debug\net8.0\ASPortStore.Tests.sourcelink.json

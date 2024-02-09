@@ -44,6 +44,22 @@ p, q, a, button, input {
     color: inherit;
 }
 
+button {
+    padding: 1rem;
+
+    border: none;
+    border-radius: 5px; 
+    background-color: inherit;
+
+    cursor: pointer;
+
+    transition: background-color 250ms;
+}
+
+button:is(:hover, :focus-within) {
+    background-color: var(--background-dark-colour);
+}
+
 #main-header {
     grid-column: 1 / -1;
 
@@ -132,7 +148,7 @@ p, q, a, button, input {
     background: var(--main-colour);
 }
 
-#product-displayer .product-card p {
+#product-displayer .product-card :is(p, form) {
     grid-column: 1 / -1;
 }
 

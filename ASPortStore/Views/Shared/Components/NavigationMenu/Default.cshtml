@@ -8,7 +8,7 @@
                 asp-controller="Home" 
                 asp-route-category=""
                 asp-route-page=""
-                data-is-selected-page="@(ViewBag.SelectedCategory == null ? "true" : "")"
+                data-is-selected-page="@((ViewBag.SelectedCategory == null) ? "true" : "")"
             >
                 Home
             </a>
@@ -19,9 +19,10 @@
             <li>
                 <a
                     asp-action="Index"
-                    asp-controller="Home" 
-                    asp-route-category="@category" 
-                    data-is-selected-page="@(ViewBag.SelectedCategory == @category ? "true" : "")"
+                    asp-controller="Home"
+                    asp-route-category="@category.ToLowerInvariant()"
+                    asp-route-page="1"
+                    data-is-selected-page="@((ViewBag.SelectedCategory == @category.ToLowerInvariant()) ? "true" : "")"
                 >
                     @category
                 </a>

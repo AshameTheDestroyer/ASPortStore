@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_CartLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0NhcnRMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

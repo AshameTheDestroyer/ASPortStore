@@ -4,4 +4,12 @@
     <h2>@Model.Name</h2>
     <span>@Model.Price.ToString("c")</span>
     <p>@Model.Description</p>
+
+    <form id="@Model?.ProductID" asp-page="/Cart" method="post">
+        <input type="hidden" asp-for="ProductID" />
+
+        <input type="hidden" name="return-url" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+
+        <button type="submit">Add To Cart</button>
+    </form>
 </div>
