@@ -4,6 +4,7 @@
     --fore-colour: #1e1e1e;
     --fore-darker-colour: #0d0d0d;
     --main-colour: #35dd66;
+    --secondary-colour: #35bbdd;
 
     --box-shadow-thickness: 2px;
     --box-shadow-blurriness: 4px;
@@ -53,10 +54,10 @@ button {
 
     cursor: pointer;
 
-    transition: background-color 250ms;
+    transition: background-color 250ms, filter 250ms;
 }
 
-button:is(:hover, :focus-within) {
+button:not(.primary-button, .secondary-button):is(:hover, :focus-within) {
     background-color: var(--background-dark-colour);
 }
 
@@ -127,7 +128,6 @@ button:is(:hover, :focus-within) {
 #product-displayer .product-card {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr;
     gap: 1rem;
 
     padding: 1rem;
@@ -139,17 +139,13 @@ button:is(:hover, :focus-within) {
 #product-displayer .product-card span {
     font-weight: bold;
 
-    place-self: start;
+    place-self: end;
 
     padding: 0.5rem;
 
     border-radius: 100rem;
     color: var(--background-colour);
     background: var(--main-colour);
-}
-
-#product-displayer .product-card :is(p, form) {
-    grid-column: 1 / -1;
 }
 
 .paginator {
@@ -205,4 +201,38 @@ button:is(:hover, :focus-within) {
 .paginator a:is(:hover, :focus-visible) {
     color: var(--background-colour);
     background-color: var(--fore-colour);
+}
+
+#cart-table {
+    border-collapse: collapse;
+}
+
+#cart-table :is(td, th) {
+    text-align: center;
+    
+    padding: 1rem;
+    
+    border: 2px solid var(--fore-darker-colour);
+}
+
+#cart-table tbody tr:nth-child(odd) {
+    background-color: var(--background-dark-colour);
+}
+
+.primary-button {
+    font-weight: bold;
+
+    color: var(--background-colour);
+    background-color: var(--main-colour);
+}
+
+.secondary-button {
+    font-weight: bold;
+
+    color: var(--background-colour);
+    background-color: var(--secondary-colour);
+}
+
+:is(.primary-button, .secondary-button):is(:hover, :focus-within) {
+    filter: brightness(110%);
 }

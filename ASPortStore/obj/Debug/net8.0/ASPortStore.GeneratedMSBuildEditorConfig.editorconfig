@@ -9,51 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ASPortStore
 build_property.RootNamespace = ASPortStore
-build_property.ProjectDir = C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore\
+build_property.ProjectDir = c:\Users\hashe\Documents\Development\ASP.NET\ASPortStore\ASPortStore\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\hashe\OneDrive\Documents\Development\ASP.NET\ASPortStore\ASPortStore
+build_property.MSBuildProjectDirectory = c:\Users\hashe\Documents\Development\ASP.NET\ASPortStore\ASPortStore
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/Cart.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_CartLayout.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_CartLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0NhcnRMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_ViewImports.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_ViewStart.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Home/Index.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Shared/Components/NavigationMenu/Default.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Shared/Components/NavigationMenu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2aWdhdGlvbk1lbnVcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Shared/ProductCard.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Shared/ProductCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFByb2R1Y3RDYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Shared/_Layout.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/_ViewImports.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hashe/OneDrive/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/_ViewStart.cshtml]
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

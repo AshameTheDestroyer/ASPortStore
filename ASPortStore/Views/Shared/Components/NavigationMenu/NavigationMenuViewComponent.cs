@@ -10,9 +10,11 @@ public class NavigationMenuViewComponent(IStoreRepository repository) : ViewComp
     public IViewComponentResult Invoke()
     {
         ViewBag.SelectedCategory = RouteData?.Values["category"];
-        return View(storeRepository.Products
-                                   .Select(x => x.Category)
-                                   .Distinct()
-                                   .OrderBy(x => x));
+        return View(
+            storeRepository
+                .Products.Select(product => product.Category)
+                .Distinct()
+                .OrderBy(product => product)
+        );
     }
 }

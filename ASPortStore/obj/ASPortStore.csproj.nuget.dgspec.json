@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj": {}
+    "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj": {
+    "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj",
+        "projectUniqueName": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj",
         "projectName": "ASPortStore",
-        "projectPath": "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj",
+        "projectPath": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\ASPortStore.csproj",
         "packagesPath": "C:\\Users\\hashe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hashe\\OneDrive\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\obj\\",
+        "outputPath": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hashe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

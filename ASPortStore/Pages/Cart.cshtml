@@ -1,3 +1,36 @@
-﻿@page "~/cart"
-
-<p>This is the Cart Page</p>
+@page
+@model CartModel
+<h2>Your cart</h2>
+<table id="cart-table">
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model?.Cart?.Lines ?? Enumerable.Empty<CartLine>()) {
+            <tr>
+                <td>@line.Quantity</td>
+                <td>@line.Product.Name</td>
+                <td>@line.Product.Price.ToString("c")</td>
+                <td>
+                    @((line.Quantity * line.Product.Price).ToString("c"))
+                </td>
+            </tr>
+            }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>
+                @Model?.Cart?.ComputeTotalValue().ToString("c")
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<button class="primary-button">
+    <a href="@Model?.ReturnUrl">Continue shopping</a>
+</button>

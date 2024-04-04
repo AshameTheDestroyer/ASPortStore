@@ -10,22 +10,28 @@ public class HomeController(IStoreRepository storeRepository) : Controller
 
     public int PageSize { get; set; } = 2;
 
-    public ViewResult Index(string? category, int page = 1)
-        => View(new ProductsListViewModel
-        {
-            Products = storeRepository.Products
-                                      .OrderBy(product => product.ProductID)
-                                      .Where(product => category == null || product.Category == category)
-                                      .Skip((page - 1) * PageSize)
-                                      .Take(PageSize),
-            PagingInfo = new PagingInfo
+    [HttpGet("")]
+    [HttpGet("{category:alpha}")]
+    [HttpGet("{category:alpha}/page{page:int}")]
+    [HttpGet("page{page:int}")]
+    public ViewResult Index(string? category, int page = 1) =>
+        View(
+            new ProductsListViewModel
             {
-                CurrentPage = page,
-                ItemsPerPage = PageSize,
-                TotalItems = storeRepository.Products
-                                            .Where(product => category == null || product.Category == category)
-                                            .Count(),
-            },
-            CurrentCategory = category,
-        });
+                Products = storeRepository
+                    .Products.OrderBy(product => product.ProductID)
+                    .Where(product => category == null || product.Category == category)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalItems = storeRepository
+                        .Products.Where(product => category == null || product.Category == category)
+                        .Count(),
+                },
+                CurrentCategory = category,
+            }
+        );
 }
