@@ -8,7 +8,7 @@ public class HomeController(IStoreRepository storeRepository) : Controller
 {
     private readonly IStoreRepository storeRepository = storeRepository;
 
-    public int PageSize { get; set; } = 2;
+    public int PageSize { get; set; } = 6;
 
     [HttpGet("")]
     [HttpGet("{category:alpha}")]

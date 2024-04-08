@@ -12,6 +12,8 @@
     --box-shadow-colour: #0d0d0d70;
     --box-shadow:
         0 0 var(--box-shadow-blurriness) var(--box-shadow-thickness) var(--box-shadow-colour);
+    --box-shadow-side:
+        var(--box-shadow-thickness) var(--box-shadow-thickness) var(--box-shadow-blurriness) calc(var(--box-shadow-thickness) / 2) var(--box-shadow-colour);
 
     font-size: 62.5%;
 }
@@ -52,6 +54,7 @@ button {
     border-radius: 5px;
     color: var(--fore-colour);
     background-color: var(--background-colour);
+    box-shadow: var(--box-shadow-side);
 
     cursor: pointer;
 
@@ -79,7 +82,7 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
     flex-grow: 1;
 }
 
-#main-header #my-cart-displayer {
+#main-header #cart-info-displayer {
     display: flex;
     place-content: center;
     place-items: center;
@@ -166,6 +169,7 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
 #root {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 2rem;
 
     padding: 4rem;
@@ -200,6 +204,7 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
     border-radius: 100rem;
     color: var(--background-colour);
     background: var(--main-colour);
+    box-shadow: var(--box-shadow-side);
 }
 
 .paginator {
@@ -258,21 +263,55 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
     background-color: var(--fore-colour);
 }
 
-#cart-table {
-    border-collapse: collapse;
+#cart-displayer {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    place-content: center;
+    flex-grow: 1;
+    gap: 2rem;
 }
 
-#cart-table :is(td, th) {
+#cart-displayer #cart-table {
+    --border-thickness: 2px;
+
+    max-height: 50vh;
+    max-height: 50dvh;
+    
+    display: block;
+    
+    background-color: var(--fore-darker-colour);
+    border: var(--border-thickness) solid var(--fore-darker-colour);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#cart-displayer #cart-table thead {
+    transform: scale(1.01) translateY(calc(-1 * var(--border-thickness)));
+}
+
+#cart-displayer #cart-table tbody {
+    transform: scale(1.01);
+}
+
+#cart-displayer #cart-table tfoot {
+    transform: scale(1.01) translateY(var(--border-thickness));
+}
+
+#cart-displayer #cart-table :is(td, th) {
     text-align: center;
     
     padding: 1rem;
-    
-    border: 2px solid var(--fore-darker-colour);
 }
 
-#cart-table tbody tr:nth-child(odd),
-#cart-table tfoot[data-is-even-line=true] tr {
-    background-color: var(--background-dark-colour);
+#cart-displayer #cart-table tr {
+    background-color: var(--background-colour);
+}
+
+#cart-displayer #cart-table tbody tr:nth-child(odd),
+#cart-displayer #cart-table tfoot[data-is-even-line=true] tr {
+    background-color: var(--background-dark-colour) !important;
 }
 
 .primary-button {

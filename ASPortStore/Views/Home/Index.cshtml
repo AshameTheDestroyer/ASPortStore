@@ -1,9 +1,10 @@
 ﻿@model ProductsListViewModel
-<h1>Welcome to ASPortStore!</h1>
-<main id="product-displayer">
-    @foreach (var product in Model?.Products ?? []) {
-    <partial name="ProductCard" model="product" />
-    }
+<h2>Welcome to ASPortStore!</h1>
+    <main id="product-displayer">
+        @foreach (var product in Model?.Products ?? []) {
+        <partial name="ProductCard" model="product" />
+        }
 
-    <section page-model="@Model?.PageInfo" page-action="Index" page-url-category="@Model?.CurrentCategory!"></section>
-</main>
+        <section page-model="@Model?.PageInfo" page-action="Index" page-url-category="@Model?.CurrentCategory!">
+        </section>
+    </main>

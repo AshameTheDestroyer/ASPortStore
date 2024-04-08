@@ -11,5 +11,5 @@ function CloseMainAside(e) {
     e.preventDefault();
 
     mainAside.removeAttribute("data-is-open");
-    document.removeEventListener(CloseMainAside);
+    document.removeEventListener("click", CloseMainAside);
 }
