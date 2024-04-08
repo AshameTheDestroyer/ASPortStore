@@ -3,8 +3,9 @@
     --background-dark-colour: #c8c8c8;
     --fore-colour: #1e1e1e;
     --fore-darker-colour: #0d0d0d;
-    --main-colour: #35dd66;
-    --secondary-colour: #35bbdd;
+    --main-colour: #00af64;
+    --secondary-colour: #007ebd;
+    --error-colour: #bd0000;
 
     --box-shadow-thickness: 2px;
     --box-shadow-blurriness: 4px;
@@ -22,9 +23,8 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
 
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
+    display: flex;
+    flex-direction: column;
 
     margin: 0;
     padding: 0;
@@ -49,38 +49,88 @@ button {
     padding: 1rem;
 
     border: none;
-    border-radius: 5px; 
-    background-color: inherit;
+    border-radius: 5px;
+    color: var(--fore-colour);
+    background-color: var(--background-colour);
 
     cursor: pointer;
 
     transition: background-color 250ms, filter 250ms;
 }
 
-button:not(.primary-button, .secondary-button):is(:hover, :focus-within) {
+button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus-within) {
     background-color: var(--background-dark-colour);
 }
 
 #main-header {
-    grid-column: 1 / -1;
+    --padding: 2rem;
 
-    padding: 2rem;
+    position: relative;
+    display: flex;
+
+    padding: var(--padding);
 
     color: var(--background-colour);
     background-color: var(--fore-colour);
-}
-
-#main-aside {
-    --padding-block: 2rem;
-
-    padding: var(--padding-block) 0;
-
     box-shadow: var(--box-shadow);
 }
 
-#main-aside #navigation-menu {
-    position: sticky;
-    top: var(--padding-block);
+#main-header h1 {
+    flex-grow: 1;
+}
+
+#main-header #my-cart-displayer {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#main-header #navigation-menu-toggle-button {
+    --inner-padding: 1rem;
+    --border-thickness: 3px;
+    --border-radius: 20px;
+
+    font-size: medium;
+
+    position: absolute;
+    top: 100%;
+    left: calc(var(--padding) - var(--border-thickness));
+    transform: translateY(calc(-50% + var(--border-thickness)));
+
+    padding: var(--inner-padding);
+    padding-right: calc(var(--inner-padding) * 2);
+    
+    box-shadow: var(--box-shadow);
+    
+    border: var(--border-thickness) solid var(--fore-colour);
+    border-radius: var(--border-radius);
+    border-bottom-right-radius: calc(var(--border-radius) * 5);
+}
+
+#main-aside {
+    --padding-block: 6rem;
+
+    min-height: calc(100vh - var(--padding-block) * 2);
+    min-height: calc(100dvh - var(--padding-block) * 2);
+    position: fixed;
+    inset: 0;
+    right: auto;
+    
+    padding: var(--padding-block) 0;
+
+    box-shadow: var(--box-shadow);
+    background-color: var(--background-colour);
+
+    transition: transform 500ms;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#main-aside:not([data-is-open]) {
+    transform: translateX(-100%);
 }
 
 #main-aside #navigation-menu ul {
@@ -91,6 +141,8 @@ button:not(.primary-button, .secondary-button):is(:hover, :focus-within) {
     
     margin: 0;
     padding: 0;
+
+    color: var(--fore-darker-colour);
 }
 
 #main-aside #navigation-menu ul li a {
@@ -114,20 +166,22 @@ button:not(.primary-button, .secondary-button):is(:hover, :focus-within) {
 #root {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
 
     padding: 4rem;
 }
 
 #product-displayer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 40rem), 1fr));
     gap: 2rem;
 }
 
 #product-displayer .product-card {
     display: grid;
     grid-template-columns: 1fr auto;
+    place-content: center start;
+    place-items: center start;
     gap: 1rem;
 
     padding: 1rem;
@@ -154,6 +208,7 @@ button:not(.primary-button, .secondary-button):is(:hover, :focus-within) {
 
     width: min-content;
 
+    grid-column: 1 / -1;
     display: flex;
     gap: var(--padding);
 
@@ -215,7 +270,8 @@ button:not(.primary-button, .secondary-button):is(:hover, :focus-within) {
     border: 2px solid var(--fore-darker-colour);
 }
 
-#cart-table tbody tr:nth-child(odd) {
+#cart-table tbody tr:nth-child(odd),
+#cart-table tfoot[data-is-even-line=true] tr {
     background-color: var(--background-dark-colour);
 }
 
@@ -233,6 +289,51 @@ button:not(.primary-button, .secondary-button):is(:hover, :focus-within) {
     background-color: var(--secondary-colour);
 }
 
-:is(.primary-button, .secondary-button):is(:hover, :focus-within) {
+.danger-button {
+    font-weight: bold;
+
+    color: var(--background-colour);
+    background-color: var(--error-colour);
+}
+
+:is(.primary-button, .secondary-button, .danger-button):is(:hover, :focus-within) {
     filter: brightness(110%);
+}
+
+.icon-button {
+    --size: 4rem;
+
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+
+    border-radius: 100%;
+
+    overflow: hidden;
+}
+
+.icon-button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    aspect-ratio: 1;
+
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.icon-button a {
+    position: absolute;
+    inset: 0;
+}
+
+.link-button {
+    padding: 0;
+}
+
+.link-button a {
+    padding: 1rem;
 }

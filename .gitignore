@@ -1,3 +1,5 @@
-ASPortStore.Tests
 .vs
 node_modules
+
+ASPortStore/ASPortStore.Tests/bin
+ASPortStore/ASPortStore.Tests/obj

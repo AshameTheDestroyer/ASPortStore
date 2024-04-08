@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\icons\\cart.svg",
+      "PackagePath": "staticwebassets\\icons\\cart.svg"
+    },
+    {
+      "Id": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\icons\\football.svg",
+      "PackagePath": "staticwebassets\\icons\\football.svg"
+    },
+    {
+      "Id": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\javascript\\main.js",
+      "PackagePath": "staticwebassets\\javascript\\main.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ASPortStore.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

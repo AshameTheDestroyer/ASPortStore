@@ -12,8 +12,8 @@ public class HomeController(IStoreRepository storeRepository) : Controller
 
     [HttpGet("")]
     [HttpGet("{category:alpha}")]
-    [HttpGet("{category:alpha}/page{page:int}")]
-    [HttpGet("page{page:int}")]
+    [HttpGet("{category:alpha}/Page{page:int}")]
+    [HttpGet("Page{page:int}")]
     public ViewResult Index(string? category, int page = 1) =>
         View(
             new ProductsListViewModel
@@ -23,7 +23,7 @@ public class HomeController(IStoreRepository storeRepository) : Controller
                     .Where(product => category == null || product.Category == category)
                     .Skip((page - 1) * PageSize)
                     .Take(PageSize),
-                PagingInfo = new PagingInfo
+                PageInfo = new PageInfo
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,

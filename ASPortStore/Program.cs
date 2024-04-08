@@ -14,6 +14,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
+builder.Services.AddScoped(SessionCart.GetCart);
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 var app = builder.Build();
 

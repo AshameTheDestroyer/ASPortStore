@@ -1,32 +1,22 @@
 ﻿@model IEnumerable<string>
 
-<nav id="navigation-menu">
-    <ul>
-        <li>
-            <a
-                asp-action="Index"
-                asp-controller="Home" 
-                asp-route-category=""
-                asp-route-page=""
-                data-is-selected-page="@((ViewBag.SelectedCategory == null) ? "true" : "")"
-            >
-                Home
-            </a>
-        </li>
-
-        @foreach (string category in Model ?? [])
-        {
+    <nav id="navigation-menu">
+        <ul>
             <li>
-                <a
-                    asp-action="Index"
-                    asp-controller="Home"
-                    asp-route-category="@category.ToLowerInvariant()"
-                    asp-route-page="1"
-                    data-is-selected-page="@((ViewBag.SelectedCategory == @category.ToLowerInvariant()) ? "true" : "")"
-                >
+                <a asp-action="Index" asp-controller="Home" asp-route-category="" asp-route-page=""
+                    data-is-selected-page="@((ViewBag.SelectedCategory == null).ToString().ToLower())">
+                    Home
+                </a>
+            </li>
+
+            @foreach (string category in Model ?? [])
+            {
+            <li>
+                <a asp-action="Index" asp-controller="Home" asp-route-category="@category" asp-route-page="1"
+                    data-is-selected-page="@((ViewBag.SelectedCategory == category).ToString().ToLower())">
                     @category
                 </a>
             </li>
-        }
-    </ul>
-</nav>
+            }
+        </ul>
+    </nav>

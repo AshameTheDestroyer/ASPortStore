@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ASPortStore.Views.Shared.Components.NavigationMenu;
 
-public class NavigationMenuViewComponent(IStoreRepository repository) : ViewComponent
+public class NavigationMenuViewComponent(IStoreRepository storeRepository_) : ViewComponent
 {
-    private readonly IStoreRepository storeRepository = repository;
+    private readonly IStoreRepository storeRepository = storeRepository_;
 
     public IViewComponentResult Invoke()
     {
