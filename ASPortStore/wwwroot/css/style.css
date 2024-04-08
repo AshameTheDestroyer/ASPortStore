@@ -6,6 +6,8 @@
     --main-colour: #00af64;
     --secondary-colour: #007ebd;
     --error-colour: #bd0000;
+    --required-colour: #df580a;
+    --half-transparent: #0000007c;
 
     --box-shadow-thickness: 2px;
     --box-shadow-blurriness: 4px;
@@ -36,8 +38,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-p, q, a, button, input {
+p, q, a, button, input, ul, ol, dl {
     text-decoration: none;
+    list-style-type: none;
 
     display: block;
 
@@ -47,18 +50,30 @@ p, q, a, button, input {
     color: inherit;
 }
 
-button {
-    padding: 1rem;
-
-    border: none;
-    border-radius: 5px;
+button, input {
+    accent-color: var(--main-colour);
     color: var(--fore-colour);
     background-color: var(--background-colour);
     box-shadow: var(--box-shadow-side);
+    
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 1rem;
+    
+    transition: background-color 250ms, filter 250ms;
 
     cursor: pointer;
+}
 
-    transition: background-color 250ms, filter 250ms;
+input {
+    padding: 0.5rem 1rem;
+}
+
+input:is([type=checkbox], [type=radio]) {
+    cursor: pointer;
 }
 
 button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus-within) {
@@ -375,4 +390,140 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
 
 .link-button a {
     padding: 1rem;
+}
+
+.button-displayer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 2rem;
+}
+
+#checkout-displayer {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    gap: 3rem;
+
+    padding: 3rem;
+
+    color: var(--background-colour);
+    background-color: var(--fore-colour);
+    box-shadow: var(--box-shadow);
+    
+    border-radius: 10px;
+}
+
+#checkout-displayer form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#checkout-displayer form section:not(.button-displayer) {
+    --box-shadow: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#checkout-displayer form section .input-field {
+    margin-left: 2rem;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: row-reverse;
+    place-content: center space-between;
+    place-items: center space-between;
+    gap: 2rem;
+}
+
+.input-field input[data-val-required]+label::after {
+    content: "*";
+    
+    color: var(--required-colour);
+}
+
+.input-field[data-is-checkbox] {
+    flex-direction: row;
+    place-content: center stretch;
+    place-items: center stretch;
+    gap: 1rem;
+}
+
+.input-field[data-is-checkbox] input {
+    transform: translateY(0.15em) scale(1.5);
+}
+
+.input-field[data-is-checkbox] label {
+    cursor: pointer;
+}
+
+#completed-message-displayer {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    margin-block: auto;
+    place-content: stretch center;
+    place-items: stretch center;
+    gap: 2rem;
+
+    padding: 2rem;
+    border-radius: 10px;
+
+    color: var(--background-colour);
+    background-color: var(--fore-colour);
+    box-shadow: var(--box-shadow);
+}
+
+#completed-message-displayer * {
+    --box-shadow: none;
+}
+
+#validation-summary-background {
+    position: fixed;
+    inset: 0;
+
+    background-color: var(--half-transparent);
+}
+
+#validation-summary-dialogue {
+    --box-shadow-side: none;
+    --padding: 2rem;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: var(--padding);
+
+    color: var(--background-colour);
+    background-color: var(--fore-colour);
+    box-shadow: var(--box-shadow);
+    
+    border-radius: 10px;
+}
+
+#validation-summary-dialogue>button {
+    --size: 3.25rem;
+
+    position: absolute;
+    top: var(--padding);
+    right: var(--padding);
+}
+
+#validation-summary-dialogue h2 {
+    color: var(--error-colour);
+}
+
+#validation-summary-dialogue ul {
+    list-style-type: disc;
+    padding-left: 2rem;
 }

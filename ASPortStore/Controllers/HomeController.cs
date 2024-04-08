@@ -11,8 +11,8 @@ public class HomeController(IStoreRepository storeRepository) : Controller
     public int PageSize { get; set; } = 6;
 
     [HttpGet("")]
-    [HttpGet("{category:alpha}")]
-    [HttpGet("{category:alpha}/Page{page:int}")]
+    [HttpGet("{category:alpha}Category")]
+    [HttpGet("{category:alpha}Category/Page{page:int}")]
     [HttpGet("Page{page:int}")]
     public ViewResult Index(string? category, int page = 1) =>
         View(

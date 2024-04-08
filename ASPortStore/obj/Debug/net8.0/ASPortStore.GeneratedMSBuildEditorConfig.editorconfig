@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/CompletedMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcGxldGVkTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Pages/_CartLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0NhcnRMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Order/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/hashe/Documents/Development/ASP.NET/ASPortStore/ASPortStore/Views/Shared/Components/CartSummary/Default.cshtml]

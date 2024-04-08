@@ -1,8 +1,8 @@
 ﻿namespace ASPortStore.Models;
 
-public class EFStoreRepository(StoreDbContext context) : IStoreRepository
+public class EFStoreRepository(StoreDBContext context) : IStoreRepository
 {
-    private readonly StoreDbContext context = context;
+    private readonly StoreDBContext context = context;
 
     public IQueryable<Product> Products => context.Products;
 }

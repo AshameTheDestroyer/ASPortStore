@@ -1,0 +1,74 @@
+@model Order
+
+<main id="checkout-displayer">
+    <h2>Check out now</h2>
+
+    <form asp-action="Checkout" method="post">
+        <section>
+            <h3>Ship to</h3>
+
+            <div class="input-field">
+                <input asp-for="Name" />
+                <label asp-for="Name">Name</label>
+            </div>
+        </section>
+
+        <section>
+            <h3>Address</h3>
+
+            <div class="input-field">
+                <input asp-for="Line1" />
+                <label asp-for="Line1">Line 1</label>
+            </div>
+            <div class="input-field">
+                <input asp-for="Line2" />
+                <label asp-for="Line2">Line 2</label>
+            </div>
+            <div class="input-field">
+                <input asp-for="Line3" />
+                <label asp-for="Line3">Line 3</label>
+            </div>
+            <div class="input-field">
+                <input asp-for="City" />
+                <label asp-for="City">City</label>
+            </div>
+            <div class="input-field">
+                <input asp-for="State" />
+                <label asp-for="State">State</label>
+            </div>
+            <div class="input-field">
+                <input asp-for="Zip" />
+                <label asp-for="Zip">Zip</label>
+            </div>
+            <div class="input-field">
+                <input asp-for="Country" />
+                <label asp-for="Country">Country</label>
+            </div>
+        </section>
+
+        <section>
+            <h3>Options</h3>
+
+            <div class="input-field" data-is-checkbox>
+                <input asp-for="GiftWrap" />
+                <label asp-for="GiftWrap">Gift wrap these items</label>
+            </div>
+        </section>
+
+        <section class="button-displayer">
+            <button type="reset">Clear</button>
+            <button type="submit" class="primary-button">Complete Order</button>
+        </section>
+    </form>
+</main>
+
+@if (!ViewData.ModelState.IsValid)
+{
+<div id="validation-summary-background"></div>
+<div id="validation-summary-dialogue" asp-validation-summary="All">
+    <h2>Validation Error Occurred</h2>
+    <button class="danger-button icon-button">
+        <img src="~/icons/cross.svg" alt="Cross Icon.">
+    </button>
+</div>
+}

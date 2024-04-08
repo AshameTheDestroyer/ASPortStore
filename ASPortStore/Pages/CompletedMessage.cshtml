@@ -1,0 +1,17 @@
+@page
+
+@functions {
+[BindProperty(SupportsGet = true)]
+public string? OrderId { get; set; }
+}
+
+<main id="completed-message-displayer">
+    <h2>Thanks!</h2>
+    <p>
+        Thanks for placing order #@OrderId.<br />
+        We'll ship your goods as soon as possible.
+    </p>
+    <button class="primary-button link-button">
+        <a asp-controller="Home">Return to Store</a>
+    </button>
+</main>

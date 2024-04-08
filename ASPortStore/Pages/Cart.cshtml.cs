@@ -1,4 +1,3 @@
-using ASPortStore.Infrastructure;
 using ASPortStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,10 +11,7 @@ public class CartModel(IStoreRepository repository_, Cart cart) : PageModel
     public Cart Cart { get; set; } = cart;
     public string ReturnUrl { get; set; } = "/";
 
-    public void OnGet(string returnUrl)
-    {
-        ReturnUrl = returnUrl ?? "/";
-    }
+    public void OnGet(string returnUrl) => ReturnUrl = returnUrl ?? "/";
 
     public IActionResult OnPost(long productId, string returnUrl)
     {

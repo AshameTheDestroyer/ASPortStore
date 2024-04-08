@@ -73,11 +73,14 @@ public static class SeedData
 
     public static void EnsurePopulated(IApplicationBuilder app)
     {
-        StoreDbContext context = app.ApplicationServices.CreateScope()
-                                                        .ServiceProvider
-                                                        .GetRequiredService<StoreDbContext>();
+        StoreDBContext context = app
+            .ApplicationServices.CreateScope()
+            .ServiceProvider.GetRequiredService<StoreDBContext>();
 
-        if (context.Database.GetPendingMigrations().Any()) { context.Database.Migrate(); }
+        if (context.Database.GetPendingMigrations().Any())
+        {
+            context.Database.Migrate();
+        }
 
         if (!context.Products.Any())
         {

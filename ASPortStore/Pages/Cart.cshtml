@@ -51,7 +51,12 @@
         </tfoot>
     </table>
 
-    <button class="primary-button link-button">
-        <a href="@Model?.ReturnUrl">Continue shopping</a>
-    </button>
+    <div class="button-displayer">
+        <button class="link-button">
+            <a href="@Model?.ReturnUrl">Continue shopping</a>
+        </button>
+        <button class="primary-button link-button">
+            <a asp-action="Checkout" asp-controller="Order">Checkout</a>
+        </button>
+    </div>
 </main>
