@@ -1,5 +1,4 @@
 # Things That I Still Totally Do Not Understand in ASP.NET Core
-<hr />
 
 ## Program.cs
 ```csharp
