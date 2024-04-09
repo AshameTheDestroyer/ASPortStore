@@ -440,7 +440,7 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
     gap: 2rem;
 }
 
-.input-field input[data-val-required]+label::after {
+.input-field:not([data-is-checkbox]) input[data-val-required]+label::after {
     content: "*";
     
     color: var(--required-colour);
@@ -469,17 +469,6 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
     place-content: stretch center;
     place-items: stretch center;
     gap: 2rem;
-
-    padding: 2rem;
-    border-radius: 10px;
-
-    color: var(--background-colour);
-    background-color: var(--fore-colour);
-    box-shadow: var(--box-shadow);
-}
-
-#completed-message-displayer * {
-    --box-shadow: none;
 }
 
 #validation-summary-background {
@@ -487,6 +476,12 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
     inset: 0;
 
     background-color: var(--half-transparent);
+
+    animation-name: validation-summary-background-fading-in;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.5, 1.4, 0.5, 1);
 }
 
 #validation-summary-dialogue {
@@ -503,12 +498,18 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
     gap: 2rem;
 
     padding: var(--padding);
+    padding-right: calc(var(--padding) * 4);
 
     color: var(--background-colour);
     background-color: var(--fore-colour);
     box-shadow: var(--box-shadow);
     
     border-radius: 10px;
+
+    animation-name: validation-summary-dialogue-entrance;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 #validation-summary-dialogue>button {
@@ -526,4 +527,25 @@ button:not(.primary-button, .secondary-button, .danger-button):is(:hover, :focus
 #validation-summary-dialogue ul {
     list-style-type: disc;
     padding-left: 2rem;
+}
+
+@keyframes validation-summary-dialogue-entrance {
+    from {
+        transform: translate(-50%, -50%) scale(0.01);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+@keyframes validation-summary-background-fading-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

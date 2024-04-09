@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zg903f0yGoh4FmCGXZLJHz5JfAEcyDbxR/FBh5FVYw4=",
+  "Hash": "M2E+4EfEo7ymjbOExyQY09HRl7lB+5p0Xi2yuQQtZtM=",
   "Source": "ASPortStore",
   "BasePath": "_content/ASPortStore",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icons\\cart.svg"
+    },
+    {
+      "Identity": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\icons\\cross.svg",
+      "SourceId": "ASPortStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\",
+      "BasePath": "_content/ASPortStore",
+      "RelativePath": "icons/cross.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icons\\cross.svg"
     },
     {
       "Identity": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\icons\\football.svg",

@@ -5,8 +5,8 @@ namespace ASPortStore.Controllers;
 
 public class OrderController(IOrderRepository repository_, Cart cart_) : Controller
 {
-    private IOrderRepository repository = repository_;
-    private Cart cart = cart_;
+    private readonly IOrderRepository repository = repository_;
+    private readonly Cart cart = cart_;
 
     public ViewResult Checkout() => View(new Order());
 

@@ -21,6 +21,8 @@
         validationSummaryDialogue = document.querySelector("#validation-summary-dialogue"),
         validationSummaryCloseButton = document.querySelector("#validation-summary-dialogue>button");
 
+    if (validationSummaryDialogue == null) { return; }
+
     document.addEventListener("keydown", CloseValidationSummaryDialogue);
     validationSummaryBackground.addEventListener("click", CloseValidationSummaryDialogue);
     validationSummaryCloseButton.addEventListener("click", CloseValidationSummaryDialogue);

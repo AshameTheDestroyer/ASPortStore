@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\icons\\cart.svg"
     },
     {
+      "Id": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\icons\\cross.svg",
+      "PackagePath": "staticwebassets\\icons\\cross.svg"
+    },
+    {
       "Id": "C:\\Users\\hashe\\Documents\\Development\\ASP.NET\\ASPortStore\\ASPortStore\\wwwroot\\icons\\football.svg",
       "PackagePath": "staticwebassets\\icons\\football.svg"
     },
